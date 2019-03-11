@@ -1,16 +1,15 @@
 /**
- * Created by richard.becker on 11/6/18.
+ * Created by richard.becker on 3/11/19.
  * The top level/root component for the application
  */
 import '../assets/app.css'
 
-
 <template>
-<div style="background-color:lightgrey;">
+<div>
   <div>
-    <h1>Test App</h1>
+    <h1>Cesium-Vue Template App</h1>
   </div>
-  <div style ="width:100%;">
+  <div>
       <CesiumComponent style ="display:inline-block;" :on-mouse-over="cesiumOnMouseOver" :on-entity-selected="cesiumOnEntitySelected"/>
   </div>
 </div>
@@ -28,15 +27,9 @@ export default {
 
   },
   methods: {
-    rowClicked(event) {
-      this.$eventBus.$emit("selectEntity", event.name);
-      this.$eventBus.$emit("rowSelected", event);
-    },
     cesiumOnMouseOver(event) {
-
     },
     cesiumOnEntitySelected(event) {
-
     }
   }
 }
